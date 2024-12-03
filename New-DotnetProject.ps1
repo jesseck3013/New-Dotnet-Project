@@ -1,4 +1,4 @@
-function New-Dotnet-Project {
+function New-DotnetProject {
     param (
 	[validateset("web", "console", "classlib")]
         [Parameter(Mandatory)]
@@ -19,5 +19,3 @@ function New-Dotnet-Project {
     dotnet add "./${ProjectName}.Tests/${ProjectName}.Tests.csproj" reference "./${ProjectName}/${ProjectName}.csproj"
     dotnet sln add "./${ProjectName}.Tests/${ProjectName}.Tests.csproj"
 }
-
-
